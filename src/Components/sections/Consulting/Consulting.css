@@ -1,0 +1,47 @@
+.consulting-sec .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6rem;
+    padding-top: 2rem;
+}
+
+.consulting-sec .row .box {
+    width: calc(100% / 3 - 12rem / 3);
+    text-align: center;
+}
+
+.consulting-sec .row .box h3 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.consulting-sec .row .box p {
+    color: var(--text-dark);
+    opacity: 0.7;
+}
+
+@media(max-width:992px) {
+    .consulting-sec .row {
+        gap: 3rem;
+    }
+
+    .consulting-sec .row .box {
+        width: calc(100% / 3 - 6rem / 3);
+    }
+}
+
+@media(max-width:767px) {
+    .consulting-sec .row {
+        gap: 4rem;
+    }
+
+    .consulting-sec .row .box {
+        width: 100%;
+    }
+
+    .consulting-sec .row .box h3 {
+        margin: 1.2rem 0;
+    }
+}

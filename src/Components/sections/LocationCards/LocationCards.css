@@ -1,0 +1,80 @@
+.location-cards {
+    background-color: var(--bg-color);
+}
+
+.location-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.location-row .card {
+    width: calc(100% / 3 - 8rem / 3);
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.location-row .card img {
+    height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.location-row .card .content {
+    padding: 2rem;
+}
+
+.location-row .card .content h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+}
+
+.location-row .card .content p {
+    color: var(--primary-color);
+    opacity: 0.7;
+    margin: 2rem 0;
+}
+
+.location-row .card .content a {
+    display: block;
+    color: var(--primary-color);
+    opacity: 0.7;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.location-row .card .content a.email {
+    margin: 2rem 0;
+}
+
+.location-row .card .content a:hover {
+    opacity: 1;
+}
+
+@media(max-width:992px) {
+    .location-row {
+        gap: 2rem;
+    }
+
+    .location-row .card {
+        width: calc(100% / 3 - 4rem / 3);
+    }
+}
+
+@media(max-width:767px) {
+    .location-row {
+        gap: 3rem;
+    }
+
+    .location-row .card {
+        width: calc(100% / 2 - 3rem / 2);
+    }
+}
+
+@media(max-width:510px) {
+    .location-row .card {
+        width: 100%;
+    }
+}

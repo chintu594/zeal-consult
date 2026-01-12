@@ -1,0 +1,88 @@
+.contactInfoSec {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contactInfo>div {
+    text-align: center;
+}
+
+.contactInfo>div:first-child {
+    max-width: 21rem;
+}
+
+.contactInfo>div:nth-child(4n+2) {
+    max-width: 17rem;
+}
+
+.contactInfo>div:nth-child(4n+3) {
+    max-width: 14rem;
+}
+
+.contactInfo>div:last-child {
+    max-width: 20rem;
+}
+
+.contactInfo>div i {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+.contactInfo>div h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-block: 2rem;
+}
+
+.contactInfo>div p,
+.contactInfo>div a {
+    color: var(--primary-color);
+    opacity: 0.6;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.contactInfo>div a {
+    text-decoration: underline;
+}
+
+.contactInfo>div a:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+@media(max-width:850px) {
+
+    .contactInfo>div:first-child,
+    .contactInfo>div:nth-child(4n+2),
+    .contactInfo>div:nth-child(4n+3),
+    .contactInfo>div:last-child {
+        max-width: 100%;
+    }
+
+    .contactInfo>div {
+        width: calc(100% / 2 - 3rem / 2);
+    }
+}
+
+@media(max-width:420px) {
+    .contactInfo {
+        gap: 5rem;
+    }
+
+    .contactInfo>div {
+        width: 100%;
+    }
+
+    .contactInfo>div h4 {
+        margin-block: 1.2rem;
+    }
+}

@@ -1,0 +1,129 @@
+.submit-sec {
+    background-color: var(--bg-color);
+    padding: 6rem 0;
+}
+
+.submit-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.submit-form .image {
+    width: 38%;
+}
+
+.submit-form .image img {
+    width: 100%;
+}
+
+.submit-form .form-sec {
+    background-color: var(--white);
+    width: calc(100% - calc(38% + 3rem));
+    padding: 5rem;
+}
+
+.form-sec h2 {
+    margin-top: 2rem;
+}
+
+.form {
+    margin-top: 2.4rem;
+}
+
+.form ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.form ul li {
+    width: calc(100% / 2 - 2rem / 2);
+}
+
+.form ul .subject_parent,
+.form ul .message_parent {
+    width: 100%;
+}
+
+.form ul li label {
+    display: block;
+    margin-bottom: 0.4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.form ul li input,
+.form ul li textarea {
+    border: 1px solid #171d2f33;
+    resize: none;
+    outline: 0;
+    height: 4rem;
+    padding: 0.9rem 1.6rem;
+    color: var(--primary-color);
+    background-color: var(--white);
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+.form ul li input:focus,
+.form ul li textarea:focus {
+    outline: 1px solid var(--secondary-color);
+}
+
+.form ul li input::placeholder,
+.form ul li textarea::placeholder {
+    color: #00000079;
+}
+
+.form ul button {
+    transition: 0.3s;
+}
+
+.form ul button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.success-msg {
+    margin-top: 2rem;
+}
+
+.form-error {
+    color: rgb(255, 25, 25);
+    margin-top: 1.5em;
+}
+
+.errro-show ul li input,
+.errro-show ul li textarea {
+    border: 1px solid rgb(255, 72, 72);
+}
+
+@media(max-width:992px) {
+    .submit-form .form-sec {
+        padding: 3rem;
+    }
+}
+
+@media(max-width:767px) {
+    .submit-form .image {
+        width: 100%;
+    }
+
+    .submit-form .form-sec {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:480px) {
+    .form ul li {
+        width: 100%;
+    }
+}

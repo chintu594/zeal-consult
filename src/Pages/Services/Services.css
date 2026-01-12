@@ -1,0 +1,11 @@
+.service-solution {
+    padding: 8rem 0;
+}
+
+.service-solution .grid {
+    flex-direction: row-reverse;
+}
+
+.service-solution .grid .image {
+    text-align: center;
+}

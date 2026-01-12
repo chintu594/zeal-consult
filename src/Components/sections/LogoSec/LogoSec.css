@@ -1,0 +1,24 @@
+.logo-sec {
+    background-color: var(--white);
+    padding-block: 6rem;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.logo-row img {
+    max-width: 15.4rem;
+    display: inline-block;
+}
+
+@media(max-width:767px) {
+    .logo-row {
+        justify-content: center;
+    }
+
+}

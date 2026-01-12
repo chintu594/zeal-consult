@@ -1,0 +1,128 @@
+.header {
+    background-color: var(--primary-color);
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.dark-header {
+    background-color: var(--primary-color);
+}
+
+.navbar,
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.menus ul a {
+    opacity: 0.85;
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding: 0.8rem 1.6rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s;
+    display: inline-block;
+}
+
+.menus ul a:hover,
+.menus ul a.active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar .border-btn {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.toggle {
+    padding: 2.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: none;
+}
+
+.toggle i {
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+@media(max-width:992px) {
+    .header .container {
+        padding: 0 15px 0 0;
+    }
+
+    .navbar .border-btn {
+        display: none;
+    }
+
+}
+
+@media(max-width:767px) {
+    .header .container {
+        padding: 0;
+    }
+
+    .logo a img {
+        height: 8rem;
+    }
+
+    .menus {
+        position: absolute;
+        left: 0;
+        top: 70px;
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        width: 100%;
+        z-index: 99;
+        transition: all 0.4s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    .menus-show {
+        transform: scaleY(1) !important;
+    }
+
+    .menus ul {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .menus ul a {
+        color: var(--primary-color);
+        font-weight: 700;
+        opacity: 0;
+    }
+
+    .menus-show ul a {
+        opacity: 1 !important;
+    }
+
+    .menus ul a:hover,
+    .menus ul a.active {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .ri-close-fill:before {
+        content: "\eb98" !important;
+    }
+}

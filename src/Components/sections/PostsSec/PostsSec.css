@@ -1,0 +1,98 @@
+.posts-sec {
+    background-color: var(--bg-color);
+}
+
+.title-sec {
+    margin-bottom: 4rem;
+}
+
+.title-sec span {
+    text-align: center;
+    display: block;
+}
+
+.title-sec h2 {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.post-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.post-grid .column {
+    width: calc(100% / 3 - 8rem / 3);
+    background-color: var(--white);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(163, 163, 163, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.post-grid .column:hover {
+    box-shadow: 5px 5px 15px rgba(163, 163, 163, 0.6);
+    transform: translateY(-10px);
+}
+
+.post-grid .column .image img {
+    width: 100%;
+}
+
+.post-grid .column .content {
+    padding: 2rem;
+}
+
+.post-grid .column h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.post-grid .column p,
+.post-grid .column>div a {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    display: inline-block;
+}
+
+.post-grid .column>div a i {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-grid .column:hover>div a i {
+    margin-left: 10px;
+}
+
+.load-heading {
+    text-align: center;
+    width: 100%;
+}
+
+.load-heading h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media(max-width:992px) {
+    .post-grid .column {
+        width: calc(100% / 2 - 3rem / 2);
+    }
+}
+
+@media(max-width:620px) {
+    .title-sec {
+        max-width: 100%;
+    }
+
+    .post-grid .column {
+        width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+.CTA-Sec {
+    padding-block: 10rem;
+    background-color: var(--primary-color);
+    background: url(../../../images/CTA_Bg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.CTA h2 {
+    color: var(--white);
+}
+
+.CTA p {
+    max-width: 52%;
+    margin: 2.4rem auto;
+}
+
+@media(max-width:767px) {
+    .CTA-Sec {
+        padding-block: 7rem;
+    }
+
+    .CTA p {
+        max-width: 100%;
+    }
+}

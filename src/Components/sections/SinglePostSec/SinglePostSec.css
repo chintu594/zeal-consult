@@ -1,0 +1,42 @@
+.single-post {
+    background-color: var(--bg-color);
+}
+
+.single-post .post {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+    align-items: center;
+}
+
+.single-post .post>div {
+    width: calc(100% / 2 - 5rem / 2);
+}
+
+.single-post .post .image img {
+    width: 100%;
+}
+
+.single-post .post .content p {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    opacity: 0.8;
+    margin: 2rem 0;
+}
+
+.single-post .post .content .btn {
+    padding-block: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.single-post .post .content .btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+@media(max-width:767px) {
+    .single-post .post>div {
+        width: 100%;
+    }
+}
