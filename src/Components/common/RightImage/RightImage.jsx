@@ -18,7 +18,7 @@ const RightImage = ({ subTitle, title, desc, btnText, btnUrl, image, varient }) 
                         <h1>{title}</h1>
                         <p>{desc}</p>
                         <Link to={btnUrl} className="btn">{btnText}</Link>
-                         <Link to='*' className="btn">404 page</Link>
+                        
                     </motion.div>
                     <motion.div className="image"
                         initial={{ opacity: 0, x: 80 }}
