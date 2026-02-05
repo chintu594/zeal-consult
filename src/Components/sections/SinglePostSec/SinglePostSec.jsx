@@ -3,10 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useContext } from 'react'
 import './SinglePostSec.css'
 import { PostsContext } from '../../../Context/PostsContext'
-
-
-
-
+    
 const SinglePostSec = () => {
     const navigate = useNavigate();
 

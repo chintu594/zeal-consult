@@ -2,9 +2,22 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../../images/logo.svg'
 import { useState, useEffect } from 'react'
+import { useLocation, matchRoutes } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
+    const routes = [
+        { path: '/' },
+        { path: '/about' },
+        { path: '/services' },
+        { path: '/posts' },
+        { path: '/posts/:slug' },
+        { path: '/contact' },
+    ]
+    const location = useLocation();
+
+    const is404 = !matchRoutes(routes, location);
+
     const [menuDisplay, setMenuDisplay] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -21,7 +34,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`header ${scrolled ? "dark-header" : ""}`}>
+        <header className={`header ${scrolled || is404 ? "dark-header" : ""}`}>
             <div className="container">
                 <nav className="navbar">
                     <div className="logo">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
 import Header from './Components/common/Header/Header'
 import Router from './Root/Router'
 import Footer from './Components/common/Footer/Footer'
@@ -7,7 +7,7 @@ import ScrollToTop from './Components/common/ScrollToTop'
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/zeal-consult">
       <ScrollToTop />
       <Header />
       <Router />

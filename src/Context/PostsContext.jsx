@@ -1,27 +1,30 @@
-import { createContext, useEffect, useState } from "react";
-
-
+import { createContext, useCallback, useEffect, useState } from "react";
 export const PostsContext = createContext();
 
 const PostsProvider = ({ children }) => {
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const makeSlug = (title) => {
+    const makeSlug = useCallback((title) => {
         return title
             .toLowerCase()
             .trim()
-            .replace(/ /g, "-").
-            replace(/[^\w-]+/g, "");
-    }
+            .replace(/ /g, "-")
+            .replace(/[^\w-]+/g, "");
+    }, []);
 
     useEffect(() => {
         setLoading(true);
+
         const getUserData = async () => {
-            let url = 'https://jsonplaceholder.typicode.com/posts';
-            let response = await fetch(url);
-            response = await response.json();
-            setUserData(response);
+            try {
+                let url = 'https://jsonplaceholder.typicode.com/posts';
+                let response = await fetch(url);
+                response = await response.json();
+                setUserData(response);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
             setLoading(false);
         }
         getUserData();

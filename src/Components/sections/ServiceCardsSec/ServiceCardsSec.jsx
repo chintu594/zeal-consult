@@ -26,7 +26,7 @@ const ServiceCardsSec = ({ subTitle, mainTitle, desc, showLink, limit }) => {
                         )}
                     </div>
                 </motion.div>
-                <motion.div className="service-grid" initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+                <motion.div className="service-grid" initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
                     {ServiceData.slice(0, visibleCards).map((item) => {
                         return (
                             <ServiceCard key={item.id} icon={item.icon} hoverIcon={item.hoverIcon} title={item.title} description={item.description} />

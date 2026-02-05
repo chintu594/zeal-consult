@@ -22,9 +22,9 @@ const PostsSec = ({ limit, lodeMoreBtn, viewMoreBtn }) => {
                             userData.slice(0, visibleCount).map((post) => {
                                 const slug = makeSlug(post.title);
                                 return (
-                                    <Link to={`/posts/${slug}`} className='column' key={post.id}>
+                                    <div /* to={`${import.meta.env.BASE_URL}posts/${slug}`} */ className='column' key={post.id}>
                                         <div className="image">
-                                            <img src={`https://picsum.photos/400/300?random=${post.id}`} alt={post.title} />
+                                            <img src={`https://picsum.photos/id/${post.id}/400/300`} onError={(e) => { e.target.src = "/advice.avif" }} alt={post.title} />
                                         </div>
                                         <div className="content">
                                             <h3>{post.title}</h3>
@@ -33,7 +33,7 @@ const PostsSec = ({ limit, lodeMoreBtn, viewMoreBtn }) => {
                                                 <Link to={`/posts/${slug}`}>Read more <i class="ri-arrow-right-long-line"></i></Link>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 )
                             }) :
                             <div className='load-heading'><h3>...Data is Loading</h3></div>

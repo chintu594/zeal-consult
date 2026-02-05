@@ -1,0 +1,8 @@
+.error-404 img {
+    margin-top: 80px;
+    max-height: 420px;
+   
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
