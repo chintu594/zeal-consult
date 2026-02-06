@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PostsContext } from '../../../Context/PostsContext'
 import './PostsSec.css'
 import { delay, motion } from 'framer-motion'
+import { div, img } from 'framer-motion/client'
 
 const PostsSec = ({ limit, lodeMoreBtn, viewMoreBtn }) => {
     const { userData, loading, makeSlug } = useContext(PostsContext);
